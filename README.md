@@ -6,8 +6,8 @@ One entry point for a **regular Fedora 44 minimal x86_64 installation**, with no
 You need a working Internet connection and an existing ordinary user with a login password. Extract the entire bundle, then run from a TTY:
 
 ```bash
-tar -xzf fedora44-hyprland-noctalia.tar.gz
-cd fedora44-hyprland-noctalia
+git clone https://github.com/nnfisfree/fedora-noct5.git
+cd fedora-noct5
 sudo bash install.sh "$USER"
 sudo reboot
 ```
