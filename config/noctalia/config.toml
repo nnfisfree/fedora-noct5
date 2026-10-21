@@ -1,0 +1,11 @@
+# Functional integration only. Unspecified appearance settings use Noctalia defaults.
+[shell]
+polkit_agent = true
+launch_apps_as_systemd_services = true
+clipboard_image_action_command = "swash --stdin --name \"Clipboard.png\""
+
+[shell.screenshot]
+copy_to_clipboard = false
+pipe_command = "swash --stdin --name \"Screenshot-$(date +'%Y-%m-%d_%H-%M-%S').png\""
+pipe_to_command = true
+save_to_file = false

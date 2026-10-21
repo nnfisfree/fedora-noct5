@@ -1,0 +1,4 @@
+# No global theming: GTK, Qt and Noctalia keep their defaults.
+export BROWSER=firefox
+export QT_QPA_PLATFORM='wayland;xcb'
+export ELECTRON_OZONE_PLATFORM_HINT=auto

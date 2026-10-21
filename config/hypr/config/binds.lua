@@ -1,0 +1,45 @@
+-- Functional shortcuts based on the referenced CachyOS integration.
+local function app(keys, command)
+    hl.bind(keys, hl.dsp.exec_cmd("uwsm app -- " .. command))
+end
+local function shell(keys, command, options)
+    hl.bind(keys, hl.dsp.exec_cmd("noctalia msg " .. command), options)
+end
+app("SUPER + Return", "kitty")
+app("SUPER + E", "dolphin")
+app("SUPER + W", "firefox")
+app("SUPER + T", "gnome-text-editor --new-window")
+app("SUPER + C", "gnome-calculator")
+app("CONTROL + SHIFT + Escape", "kitty -e btop")
+shell("SUPER + Space", "panel-toggle launcher")
+shell("SUPER + Z", "settings-toggle")
+shell("SUPER + X", "panel-toggle control-center")
+shell("SUPER + V", "panel-toggle clipboard")
+shell("SUPER + L", "session lock")
+shell("SUPER + ALT + C", "panel-toggle session")
+shell("SUPER + SHIFT + W", "panel-toggle wallpaper")
+shell("Print", "screenshot-region")
+shell("SUPER + Print", "screenshot-fullscreen")
+app("SUPER + P", "hyprpicker -a -n")
+hl.bind("SUPER + Q", hl.dsp.window.close())
+hl.bind("SUPER + F", hl.dsp.window.fullscreen())
+hl.bind("SUPER + ALT + Space", hl.dsp.window.float({ action = "toggle" }))
+hl.bind("SUPER + mouse:272", hl.dsp.window.drag())
+hl.bind("SUPER + mouse:273", hl.dsp.window.resize())
+for _, direction in ipairs({ "left", "right", "up", "down" }) do
+    hl.bind("SUPER + " .. direction, hl.dsp.focus({ direction = direction }))
+end
+for i = 1, 10 do
+    local key = "code:" .. (9 + i) -- Physical number row, including AZERTY.
+    hl.bind("SUPER + " .. key, hl.dsp.focus({ workspace = i }))
+    hl.bind("SUPER + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
+end
+shell("XF86AudioRaiseVolume", "volume-up", { locked = true, repeating = true })
+shell("XF86AudioLowerVolume", "volume-down", { locked = true, repeating = true })
+shell("XF86AudioMute", "volume-mute", { locked = true })
+shell("XF86AudioMicMute", "mic-mute", { locked = true })
+shell("XF86AudioPlay", "media toggle", { locked = true })
+shell("XF86AudioNext", "media next", { locked = true })
+shell("XF86AudioPrev", "media previous", { locked = true })
+shell("XF86MonBrightnessUp", "brightness-up", { locked = true, repeating = true })
+shell("XF86MonBrightnessDown", "brightness-down", { locked = true, repeating = true })

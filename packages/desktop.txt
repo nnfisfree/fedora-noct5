@@ -1,0 +1,53 @@
+# Compositor, shell, session and login
+hyprland
+noctalia
+uwsm
+sddm
+sddm-wayland-generic
+sddm-themes
+# Graphics and hardware
+linux-firmware
+mesa-dri-drivers
+mesa-vulkan-drivers
+mesa-libEGL
+xorg-x11-server-Xwayland
+# Audio and connectivity
+pipewire
+pipewire-alsa
+pipewire-pulseaudio
+wireplumber
+alsa-utils
+NetworkManager
+NetworkManager-wifi
+NetworkManager-tui
+bluez
+upower
+power-profiles-daemon
+# Authentication, file picking and screen sharing
+polkit
+gnome-keyring
+gnome-keyring-pam
+xdg-desktop-portal
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+xdg-user-dirs
+xdg-utils
+# Desktop tools
+wl-clipboard
+brightnessctl
+ddcutil
+grim
+slurp
+hyprpicker
+kitty
+dolphin
+firefox
+gnome-text-editor
+gnome-calculator
+btop
+adwaita-icon-theme
+breeze-icon-theme
+google-noto-sans-fonts
+google-noto-sans-mono-fonts
+google-noto-color-emoji-fonts
+policycoreutils
