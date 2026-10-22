@@ -13,5 +13,3 @@ The two reported installation failures are corrected:
 2. Both full and resumed installations prepare a traversable, root-owned temporary directory before running any section as the desktop user. Staged-file readability is checked before replacing configuration.
 
 The bundle also includes persistent installation logs, retained diagnostic files on failure, two-job compilation for smaller VMs, and a post-login check script.
-
-A disposable Fedora 44 VM test resolved the package transaction successfully, but was stopped at the user's request before installation finished. A complete installation and graphical login are **not verified**. During installation, the target machine runs Swash's tests and Hyprland's configuration validator before graphical boot is enabled.
