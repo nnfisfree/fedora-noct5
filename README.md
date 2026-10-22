@@ -4,7 +4,7 @@ One entry point for a **regular Fedora 44 minimal x86_64 installation**, with no
 ## Run
 
 You need a working Internet connection and an existing ordinary user with a login password. Extract the entire bundle, then run from a TTY:
-
+```text
 git clone https://github.com/nnfisfree/fedora-noct5.git
 cd fedora-noct5
 chmod +x install.sh
